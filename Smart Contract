@@ -38,8 +38,8 @@ import "@1001-digital/erc721-extensions/contracts/RandomlyAssigned.sol";
                                                            ..''''.                                                      
                                                            
 // Se minteara un PGB Alatotio hasta que se hayan minteado los 2520
-// Costo por minteo 0.0003 Ether 
-// Estos son lo que se usaran para sorteos 
+// Costo por minteo 0.08 Ether 
+// 10 Estos son lo que se usaran para sorteos 
 
 contract paperbagguy is ERC721, Ownable, RandomlyAssigned {
   using Strings for uint256;
@@ -57,7 +57,7 @@ contract paperbagguy is ERC721, Ownable, RandomlyAssigned {
     maxPerWalletAllowlist = 2;
     maxPerTxnPublic = 5;
     maxPerWalletPublic = 5;
-    for (uint256 a = 1; a <= 50; a++) {
+    for (uint256 a = 1; a <= 10; a++) {
             mint();
         }
     }
