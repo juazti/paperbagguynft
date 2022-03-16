@@ -1,6 +1,6 @@
 # paperbagguynft
 Repositorio con todo los relacionado a Paper Bag Guy NFT
-Aqui publicare el contrato inteligente de la coleccion (Er721), ya que soy el operator del projecto 
+Aqui publicare el contrato inteligente de la coleccion (Erc721), ya que estoy ayudando y soy parte del team, siendo el operator del projecto
 
                                     ...',:clodxkO00KKKXXXXXXXXXXXKKK00Okxxdolc:;,....                                   
                              ...,cldk0KXNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNXKOkdlc;,...                           
