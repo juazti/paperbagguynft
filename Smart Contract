@@ -38,7 +38,7 @@ import "@1001-digital/erc721-extensions/contracts/RandomlyAssigned.sol";
                                                            ..''''.                                                      
                                                            
 // Se minteara un PGB Alatotio hasta que se hayan minteado los 2520
-// Costo por mint 0.0003 Ether 
+// Costo por minteo 0.0003 Ether 
 // Estos son lo que se usaran para sorteos 
 
 contract paperbagguy is ERC721, Ownable, RandomlyAssigned {
@@ -50,7 +50,7 @@ contract paperbagguy is ERC721, Ownable, RandomlyAssigned {
 
   constructor() 
     ERC721("paperbagguy", "PBG")
-    RandomlyAssigned(2520,1) // Max. 2520 NFTs  Disponibles; empezando por el 1 (instead of 0)
+    RandomlyAssigned(2520,1) // Max. 2520 NFTs  Disponibles; empezando por el 1 (Empezando por el 0)
     
     {
     maxPerTxnAllowlist = 2;
@@ -76,9 +76,9 @@ contract paperbagguy is ERC721, Ownable, RandomlyAssigned {
       public
       payable
   {
-      require( tokenCount() + 1 <= totalSupply(), "YOU CAN'T MINT MORE THAN MAXIMUM SUPPLY");
-      require( availableTokenCount() - 1 >= 0, "YOU CAN'T MINT MORE THAN AVALABLE TOKEN COUNT"); 
-      require( tx.origin == msg.sender, "CANNOT MINT THROUGH A CUSTOM CONTRACT");
+      require( tokenCount() + 1 <= totalSupply(), "No se puede mintear mas del maximo existente");
+      require( availableTokenCount() - 1 >= 0, "No se puede mintear mas del conteo maximo"); 
+      require( tx.origin == msg.sender, "No se puede mintear de un contrato personalizado");
 
       if (msg.sender != owner()) {  
         require( msg.value >= 0.0003 ether);
